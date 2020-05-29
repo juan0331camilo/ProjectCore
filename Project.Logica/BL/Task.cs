@@ -73,7 +73,7 @@ namespace ProjectCore.Logica.BL
             StateId= stateId,
             ActivityId= activityId,
             PriorityId= priorityId,
-            ProjectId= priorityId
+            ProjectId= projectId
                 
             });
 

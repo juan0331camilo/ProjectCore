@@ -42,10 +42,13 @@
                     <!--<a href="#" class="list-group-item list-group-item-action bg-light">Projects</a>-->
                     <a class="list-group-item list-group-item-action bg-light fas fa-project-diagram" asp-controller="Projects" asp-action="Index"> Projects</a>
 
-                    if (User.IsInRole("Admin")) { 
-                    @Html.ActionLink(" Acitivities", "Index", "Activities", null, new { @class = "list-group-item list-group-item-action bg-ligth fas fa-tasks " });
+                    if (User.IsInRole("Admin"))
+                    {
+                        @Html.ActionLink(" Acitivities", "Index", "Activities", null, new { @class = "list-group-item list-group-item-action bg-ligth fas fa-tasks " });
+                        @Html.ActionLink(" Priorities", "Index", "Priorities", null, new { @class = "list-group-item list-group-item-action bg-ligth fab fa-first-order-alt " });
+                        @Html.ActionLink(" States", "Index", "States", null, new { @class = "list-group-item list-group-item-action bg-ligth fab fa-usps " });
 
-                        }
+                    }
                 }
                 else
                 {

@@ -50,7 +50,7 @@ namespace ProjectCore.Controllers
 
             });
 
-            listProjects = tenant.Plan.Equals("premiun") ?
+            listProjects = tenant.Plan.Equals("premium") ?
                 listProjects :
                 listProjects.Take(1).ToList();
             return View(listProjects);

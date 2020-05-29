@@ -1,14 +1,13 @@
-﻿@model ProjectCore.DAL.Models.Activities
+﻿@model ProjectCore.DAL.Models.Priorities
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Delete Activities</h1>
+<h1>Details Priorities</h1>
 
-<h1 class="badge-danger">Are you sure you want to delete this?</h1>
 <div>
-    <h4>Activities</h4>
+    
     <hr />
     <table class="table-bordered">
         <tr>
@@ -29,15 +28,13 @@
             </td>
         </tr>
     </table>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <button type="submit" class="btn btn-primary ">
+</div>
+<div>
 
-            <i class="fas fa-save"></i>
-        </button>
 
-        @Html.ActionLink("  ", "Index", "Activities", null, new { @class = "btn btn-primary fas fa-undo-alt" })
+    @Html.ActionLink(" ", "Edit", "Priorities", new { id = Model.Id }, new { @class = "btn btn-primary fas fa-edit" })
+    @Html.ActionLink(" ", "Index", "Priorities", null, new { @class = "btn btn-primary fas fa-undo-alt" })
 
-    </form>
+
+
 </div>
